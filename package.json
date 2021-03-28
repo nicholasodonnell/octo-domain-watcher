@@ -1,0 +1,25 @@
+{
+  "name": "octo-domain-watcher",
+  "version": "1.0.0",
+  "description": "Keep a watchful eye on when a domain becomes available right on GitHub.",
+  "main": "index.js",
+  "repository": "https://github.com/nicholasodonnell/octo-domain-watcher",
+  "author": "Nicholas O'Donnell <nicholas@nicholasodonnell.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.3.5",
+    "chalk": "^4.1.0",
+    "dateformat": "^4.5.1",
+    "exeunt": "^1.1.1",
+    "joi": "^17.4.0",
+    "ramda": "^0.27.1",
+    "verror": "^1.10.0",
+    "whois-json": "^2.0.4"
+  }
+}

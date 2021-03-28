@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+  },
+  "rules": {
+    "array-bracket-spacing": [ "error", "always" ],
+    "arrow-parens": [ "error", "as-needed" ],
+    "comma-dangle": [ "error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    } ],
+    "indent": [ "error", 2, { "SwitchCase": 1 } ],
+    "object-curly-spacing": ["error", "always"],
+    "quotes": [ "error", "single", { "allowTemplateLiterals": true } ],
+    "no-unused-expressions": 2,
+    "semi": [ "error", "never" ]
+  }
+}
