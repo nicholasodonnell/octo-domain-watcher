@@ -1,29 +1,53 @@
 {
+  "extends": [
+    "eslint:recommended"
+  ],
   "env": {
     "es6": true,
     "node": true
   },
   "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-    },
-    "ecmaVersion": 2018,
-    "sourceType": "module",
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
+  "plugins": [
+    "import",
+    "simple-import-sort"
+  ],
   "rules": {
     "array-bracket-spacing": [ "error", "always" ],
     "arrow-parens": [ "error", "as-needed" ],
     "comma-dangle": [ "error", {
       "arrays": "always-multiline",
-      "objects": "always-multiline",
-      "imports": "always-multiline",
       "exports": "always-multiline",
-      "functions": "ignore"
+      "functions": "always-multiline",
+      "imports": "always-multiline",
+      "objects": "always-multiline"
     } ],
+    "import/newline-after-import": [ "error", { "count": 1 } ],
+    "import/no-cycle": 1,
+    "import/no-self-import": 1,
+    "import/order": [ "error", {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ],
     "indent": [ "error", 2, { "SwitchCase": 1 } ],
-    "object-curly-spacing": ["error", "always"],
-    "quotes": [ "error", "single", { "allowTemplateLiterals": true } ],
     "no-unused-expressions": 2,
-    "semi": [ "error", "never" ]
+    "object-curly-spacing": [ "error", "always" ],
+    "quotes": [ "error", "single", { "allowTemplateLiterals": true } ],
+    "semi": [ "error", "never" ],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error"
   }
 }

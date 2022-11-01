@@ -10,7 +10,9 @@
     "start": "node index.js"
   },
   "devDependencies": {
-    "eslint": "^7.22.0"
+    "eslint": "^7.22.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0"
   },
   "dependencies": {
     "@octokit/rest": "^18.3.5",
