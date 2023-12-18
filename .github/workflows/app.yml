@@ -6,11 +6,12 @@ on:
 
 jobs:
   app:
+    name: 'Octo Domain Watcher'
     runs-on: ubuntu-latest
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       -
         name: Runner
         uses: ./
@@ -18,3 +19,6 @@ jobs:
         with:
           github_labels: watch-domain
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      -
+        name: Keepalive
+        uses: gautamkrishnar/keepalive-workflow@v1
